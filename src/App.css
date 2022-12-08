@@ -1,38 +1,348 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 0fr 0.5fr 1fr;
+  grid-template-rows: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logoImg {
+  width: 120px;
+  height: 45px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sideBarContainer {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 350px;
+  border-right: 0.5px solid darkgray;
+}
+
+.logoDiv {
+  width: 160px;
+  height: 120px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  width: 180px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+}
+
+.texts {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  height: 44px;
+  width: 180px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 1s linear infinite;
+}
+
+.flex:hover {
+  background-color: #fafafa;
+  transform: scale(1.1);
+}
+
+.possition {
+  position: absolute;
+  bottom: 15px;
+  left: 1px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+
+.text-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.imageProfile {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+
+.ProfilePicture {
+  height: 210px;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.allBio {
+  width: 500px;
+  height: 210px;
+}
+
+.bio {
+  width: 100%;
+  height: 70px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.userName {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editProfileButton {
+  width: 90px;
+  height: 35px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.settingsButton {
+  width: 40px;
+  height: 35px;
+}
+
+.social {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  margin-right: 23px;
+  font-size: 15px;
+}
+
+.name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  display: flex;
+  margin-right: 230px;
+}
+
+.highlightContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.borderBottom {
+  width: 800px;
+  border-bottom: 1px solid gray;
+}
+
+.postContainer {
+  height: 700px;
+  width: 450px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin-top: 20px;
+  background-color: white;
+}
+.postTitleContainer {
+  border-radius: 10px;
+  height: 58px;
+  background-color: white;
+}
+.postTitle {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: 10px;
+}
+.reaction {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 450px;
+  gap: 10px;
+  background-color: white;
+}
+.like {
+  padding-left: 5px;
+  background-color: white;
+  height: 18px;
+}
+.commentContainer {
+  display: flex;
+  align-items: center;
+  height: 37px;
+  width: 420px;
+  background-color: white;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.timeContainer {
+  display: flex;
+  align-items: center;
+
+  height: 37px;
+  width: 420px;
+  background-color: white;
+}
+.time {
+  margin-left: 10px;
+}
+.addContainer {
+  border-top: 0.5px solid gray;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+}
+.add {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 16px 4px 12px;
+}
+.sideBarTwo {
+  width: 450px;
+  height: 500px;
+  margin: 50px 0px 0px 50px;
+}
+.profileSwitch {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.Suggested {
+  width: 100%;
+  height: 50px;
+}
+.users {
+  width: 100%;
+  height: 250px;
+}
+.footer {
+  width: 100%;
+  height: 120px;
+}
+.profilePic {
+  width: 50px;
+  height: 50px;
+}
+.Names {
+  margin-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
+.Name {
+  margin-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgray;
+  font-size: small;
+}
+.Switch {
+  margin-left: 190px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  color: cyan;
+}
+.profilePic {
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: red;
+}
+.Suggested {
+  display: flex;
+  align-items: center;
+}
+#container1{
+  margin-top:20px ;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin-left: 250px;
+ width: 80%;
+ height: 95vh;
+}
+#myname{
+display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid gray;
+border-right: hidden;
+border-top: hidden;
+border-left: hidden;
+  height: 50px;
+
+}
+#users1{
+  height: 95vh;
+  border: 2px solid gray;
+  border-left: hidden;
+  border-top: hidden;
+  border-bottom: hidden;
+  overflow: scroll;
+
+}
+#user-image-border{
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+#display{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+#user-image-border2{
+
+  border-radius: 100%;
+}
+#profile{
+  position: absolute;
+  top: 30%;
+  left: 60%;
+}
+#about{
+ font-size: 20px;
+}
+#display:hover{
+  background-color: rgb(244, 240, 240);
 }
